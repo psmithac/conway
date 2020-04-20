@@ -45,14 +45,14 @@ class ConwayCell
   
   private function makeDeadIfFewerThanTwoLiveNeighbors()
   {
-    if ($this->live_neighbors < 2) {
+    if ($this->getLiveNeighbors() < 2) {
       $this->setLife(false);
     }
   }
   
   private function makeDeadIfGreaterThanThreeLiveNeighbors()
   {
-    if ($this->live_neighbors > 3) {
+    if ($this->getLiveNeighbors() > 3) {
       $this->setLife(false);
     }
   }
